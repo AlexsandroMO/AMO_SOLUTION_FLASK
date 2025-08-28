@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Voltage Drop Calculator</h1>
+  <form method="post" action="{{ url_for('voltage_drop') }}">
+    <table>
+      <tr><th>Nominal Voltage (V)</th><td><input type="number" name="voltage"></td></tr>
+      <tr><th>Power (kW)</th><td><input type="number" name="power"></td></tr>
+      <tr><th>Current (A)</th><td><input type="number" name="current"></td></tr>
+      <tr><th>Power Factor</th><td><input type="number" step="0.01" name="pf" value="0.9"></td></tr>
+      <tr><th>Circuit Length (m)</th><td><input type="number" name="length"></td></tr>
+      <tr><th>Allowed Voltage Drop (%)</th><td><input type="number" step="0.1" name="vdAllowed" value="3"></td></tr>
+    </table>
+    <button type="submit">Calculate</button>
+  </form>
+
+  {% if result %}
+    <h3>Resultado:</h3>
+    <p>{{ result }}</p>
+  {% endif %}
+{% endblock %}
