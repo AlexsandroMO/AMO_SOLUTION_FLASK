@@ -1,0 +1,18 @@
+
+
+.my-buttons button {
+  display: block;
+  margin-bottom: 10px; /* espaçamento entre linhas */
+  width: 30%; /* opcional, para ocupar toda a largura */
+}
+
+.form-group2{
+    font-weight: bold; /* ou 700 */
+}
+
+.button-item{
+    text-decoration: none;
+    color: black;
+    font-weight: bold; /* ou 700 */
+    /*-webkit-text-stroke: 0.5px white; espessura e cor do contorno */
+}
